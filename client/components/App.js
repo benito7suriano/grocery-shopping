@@ -1,9 +1,18 @@
-import React from "react";
+import React from 'react'
+import Footer from './Footer'
+import AddGrocery from './AddGrocery'
+import GroceryList from './GroceryList'
 
 const App = () => (
   <div className="app">
-    <h1>Hello World</h1>
-  </div>
-);
+    <img src="groceries.png" alt="Groceries" width="500" />
 
-export default App;
+    <div className="list">
+      <AddGrocery />
+      <GroceryList groceries={[]} />
+      <Footer />
+    </div>
+  </div>
+)
+
+export default App
