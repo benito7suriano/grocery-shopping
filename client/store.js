@@ -1,4 +1,5 @@
 import { createStore } from 'redux'
+import { doesNotReject } from 'assert'
 
 const ADD_GROCERY = 'ADD_GROCERY'
 
@@ -33,5 +34,9 @@ const reducer = (state = initialState, action) => {
 }
 
 const store = createStore(reducer)
+
+// Manual test (temporary hard coded dispatches just for fun)
+// store.dispatch(addGrocery('milk'))
+// store.dispatch(addGrocery('cookies'))
 
 export default store

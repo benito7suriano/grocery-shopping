@@ -1,5 +1,10 @@
-import React from 'react';
-import GroceryItem from './GroceryItem';
+import React from 'react'
+import GroceryItem from './GroceryItem'
+import { connect } from 'react-redux'
+
+const mapState = (state) => ({
+  groceries: state.groceries
+})
 
 const GroceryList = (props) => (
   <ul>
@@ -9,4 +14,7 @@ const GroceryList = (props) => (
   </ul>
 )
 
-export default GroceryList
+const ConnectedGroceryList = connect(mapState)(GroceryList)
+
+
+export default ConnectedGroceryList
