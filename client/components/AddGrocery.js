@@ -1,4 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addGrocery } from '../store'
+
+const mapDispatch = (dispatch) => ({
+  add: (text) => dispatch(addGrocery(text))
+})
 
 class AddGrocery extends Component {
   constructor(props) {
@@ -37,4 +43,4 @@ class AddGrocery extends Component {
   }
 }
 
-export default AddGrocery
+export default connect(null, mapDispatch)(AddGrocery)

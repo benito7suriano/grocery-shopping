@@ -21,6 +21,7 @@ const reducer = (state = initialState, action) => {
 
   switch(action.type) {
     case ADD_GROCERY:
+      console.log('adding grocery...')
       const newGrocery = {
         id: action.id,
         text: action.text,
