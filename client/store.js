@@ -1,5 +1,5 @@
-import { createStore } from 'redux'
-import { doesNotReject } from 'assert'
+import { createStore, applyMiddleware } from 'redux'
+import loggerMiddleware from 'redux-logger'
 
 const ADD_GROCERY = 'ADD_GROCERY'
 
@@ -34,7 +34,7 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-const store = createStore(reducer)
+const store = createStore(reducer, applyMiddleware(loggerMiddleware))
 
 // Manual test (temporary hard coded dispatches just for fun)
 // store.dispatch(addGrocery('milk'))
