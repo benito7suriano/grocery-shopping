@@ -21,5 +21,4 @@ const GroceryList = (props) => (
 
 const ConnectedGroceryList = connect(mapState, mapDispatch)(GroceryList)
 
-
 export default ConnectedGroceryList
