@@ -58,10 +58,10 @@ const reducer = (state = initialState, action) => {
 const store = createStore(reducer, applyMiddleware(loggerMiddleware))
 
 // Manual test (temporary hard coded dispatches just for fun)
-store.dispatch(addGrocery('milk'))
-store.dispatch(addGrocery('cookies'))
-store.dispatch(toggleGrocery(0))
-store.dispatch(toggleGrocery(0))
-store.dispatch(setVisibilityFilter(SHOW_BOUGHT))
+// store.dispatch(addGrocery('milk'))
+// store.dispatch(addGrocery('cookies'))
+// store.dispatch(toggleGrocery(0))
+// store.dispatch(toggleGrocery(0))
+// store.dispatch(setVisibilityFilter(SHOW_ACTIVE))
 
 export default store
