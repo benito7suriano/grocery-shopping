@@ -11,9 +11,19 @@ ul {
   list-style-type: circle;
 }
 
+.grocery-item {
+  display: flex;
+  align-items: center;
+}
+
+.grocery-item > form {
+  padding-left: 20px;
+}
+
 li {
   font-size: 20px;
   margin-bottom: 5px;
+  width: 25%;
 }
 
 .app {

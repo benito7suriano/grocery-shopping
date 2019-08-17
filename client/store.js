@@ -31,7 +31,6 @@ const reducer = (state = initialState, action) => {
 
   switch(action.type) {
     case ADD_GROCERY:
-      console.log('adding grocery...')
       const newGrocery = {
         id: action.id,
         text: action.text,
@@ -74,9 +73,9 @@ const reducer = (state = initialState, action) => {
 const store = createStore(reducer, applyMiddleware(loggerMiddleware))
 
 // Manual test (temporary hard coded dispatches just for fun)
-store.dispatch(addGrocery('milk'))
-store.dispatch(addGrocery('cookies'))
-store.dispatch(setQuantity(0,20))
+// store.dispatch(addGrocery('milk'))
+// store.dispatch(addGrocery('cookies'))
+// store.dispatch(setQuantity(0,20))
 
 
 export default store
